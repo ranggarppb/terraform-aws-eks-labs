@@ -1,4 +1,4 @@
-resource "aws_vpc" "kubernetes_labs_vpc" {
+resource "aws_vpc" "kubernetes_labs" {
   provider = aws.module
   
   cidr_block = "192.168.0.0/16"

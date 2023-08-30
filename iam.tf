@@ -6,7 +6,7 @@ data "aws_iam_policy_document" "kubernetes_labs_cluster_trust_policy" {
     effect  = "Allow"
     principals {
       type        = "Service"
-      identifiers = "eks.amazonaws.com"
+      identifiers = ["eks.amazonaws.com"]
     }
   }
 }
@@ -35,7 +35,7 @@ data "aws_iam_policy_document" "kubernetes_labs_workers_trust_policy" {
     effect  = "Allow"
     principals {
       type        = "Service"
-      identifiers = "ec2.amazonaws.com"
+      identifiers = ["ec2.amazonaws.com"]
     }
   }
 }
