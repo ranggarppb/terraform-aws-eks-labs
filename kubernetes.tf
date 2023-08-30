@@ -20,9 +20,7 @@ locals {
   ]
 }
 
-resource "kubernetes_config_map" "kubernetes_labs" {
-  provider = aws.module
-  
+resource "kubernetes_config_map" "kubernetes_labs" {  
   metadata {
     name      = "aws-auth"
     namespace = "kube-system"
@@ -39,9 +37,7 @@ resource "kubernetes_config_map" "kubernetes_labs" {
   depends_on = [aws_eks_cluster.kubernetes_labs]
 }
 
-resource "kubernetes_cluster_role" "kubernetes_labs_reader" {
-  provider = aws.module
-  
+resource "kubernetes_cluster_role" "kubernetes_labs_reader" {  
   metadata {
     name = "reader"
   }
@@ -53,9 +49,7 @@ resource "kubernetes_cluster_role" "kubernetes_labs_reader" {
   }
 }
 
-resource "kubernetes_cluster_role_binding" "kubernetes_labs" {
-  provider = aws.module
-  
+resource "kubernetes_cluster_role_binding" "kubernetes_labs" {  
   metadata {
     name = "reader"
   }
