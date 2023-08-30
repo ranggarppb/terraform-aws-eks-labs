@@ -45,7 +45,7 @@ resource "aws_iam_role" "kubernetes_labs_workers" {
   
   name = "eks-workers"
 
-  assume_role_policy = data.aws_iam_policy_document.kubernetes_labs_cluster_trust_policy.json
+  assume_role_policy = data.aws_iam_policy_document.kubernetes_labs_workers_trust_policy.json
 }
 
 resource "aws_iam_role_policy_attachment" "kubernetes_labs_workers_general" {
