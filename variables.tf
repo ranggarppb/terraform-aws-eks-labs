@@ -20,3 +20,8 @@ variable "aws_user_id" {
   description = "AWS User ID"
   nullable    = false
 }
+
+variable "cluster_name" {
+  type        = string
+  description = "Cluster name"
+}
