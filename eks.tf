@@ -1,6 +1,6 @@
 resource "aws_eks_cluster" "kubernetes_labs" {
   provider = aws.module
-  
+
   name = "kubernetes_labs"
 
   role_arn = aws_iam_role.kubernetes_labs.arn

@@ -1,6 +1,6 @@
 resource "aws_eks_node_group" "kubernetes_labs_workers" {
   provider = aws.module
-  
+
   cluster_name = aws_eks_cluster.kubernetes_labs.name
 
   node_group_name = "kubernetes_labs_workers"

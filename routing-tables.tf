@@ -1,6 +1,6 @@
 resource "aws_route_table" "kubernetes_labs_public" {
   provider = aws.module
-  
+
   vpc_id = aws_vpc.kubernetes_labs.id
 
   route {
@@ -15,7 +15,7 @@ resource "aws_route_table" "kubernetes_labs_public" {
 
 resource "aws_route_table" "kubernetes_labs_private_1" {
   provider = aws.module
-  
+
   vpc_id = aws_vpc.kubernetes_labs.id
 
   route {
@@ -30,7 +30,7 @@ resource "aws_route_table" "kubernetes_labs_private_1" {
 
 resource "aws_route_table" "kubernetes_labs_private_2" {
   provider = aws.module
-  
+
   vpc_id = aws_vpc.kubernetes_labs.id
 
   route {

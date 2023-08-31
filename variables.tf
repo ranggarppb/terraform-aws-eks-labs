@@ -10,8 +10,8 @@ variable "availability_zones" {
   nullable    = false
 
   validation {
-	condition = length(var.availability_zones) == 2
-	error_message = "Specify exactly two availability zones in the region"
+    condition     = length(var.availability_zones) == 2
+    error_message = "Specify exactly two availability zones in the region"
   }
 }
 
